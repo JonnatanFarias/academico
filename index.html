@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style/style.css" rel="stylesheet">
+    <script src="./js/script.js"></script>
+
+    <title>JS acadêmico</title>
+</head>
+
+<body>
+    <header>
+        <!--Nav-->
+        <div class="title">
+            <h1 class="titlenav">Meu</h1>
+            <h1 class="titlenav">JavaScript</h1>
+        </div>
+        <ul>
+            <li>
+                <a href="#cardOperacoesMatematicas">Operações fundamentais</a>
+            </li>
+            <li>
+                <a href="#cardDicionarioOnline">Discionario Online</a>
+            </li>
+            <li>
+                <a href="#cardRelogioDigital">Relógio Digital</a>
+            </li>
+            <li>
+                Example4
+            </li>
+        </ul>
+    </header>
+    <main class="conteudo">
+        <!--OPERAÇÕES MATEMÁTICAS-->
+        <div class="card" id="cardOperacoesMatematicas">
+            <div>
+                <p class="TituloCard">Cálculos fundamentais</p>
+                <!--checkbox adição-->
+                <input type="checkbox" name="adição" id="checkadicao">
+                <label for="adição">adição</label>
+                <!--checkbox subtração-->
+                <input type="checkbox" name="subtração" id="checksubtracao">
+                <label for="subtração">subtração</label>
+                <!--checkbox multiplicação-->
+                <input type="checkbox" name="multiplicação" id="checkmultiplicacao">
+                <label for="multiplicação">multiplicação</label>
+                <!--checkbox divisão-->
+                <input type="checkbox" name="divisão" id="checkdivisao">
+                <label for="divisão">divisão</label>
+
+                <!--input 1°-->
+                <p>Digite o primeiro número</p>
+                <input type="number" class="number1" id="n1" placeholder="Número 1">
+
+                <!--input 2°-->
+                <p>Digite o segundo número</p>
+                <input type="number" class="number2" id="n2" placeholder="Número 2">
+            </div>
+            <!--button calcular-->
+            <button class="btnCalc" onclick="calcula()">Calcular</button>
+
+            <div>
+                <p>Resultado das operações fundamentais</p>
+            </div>
+            <div class="cardResult">
+                <div class="labelResult">
+                    <label id="adicao">Resultado da adição</label>
+                    <label id="subtracao">Resultado da subtração</label>
+                    <label id="multiplicacao">Resultado da multiplicação</label>
+                    <label id="divisao">Resultado divisão</label>
+                </div>
+            </div>
+            <!--TERMINA AQUI!-->
+            <!---------------------->
+
+        </div>
+
+    </main>
+    <main class="card2">
+        <!--DISCIONARIO ONLINE-->
+        <div class="cardDiscionario" id="cardDicionarioOnline">
+            <label class="LabelDiscionario">Dicionário Online</label>
+            <form class="js-formulario">
+                <input class="inputSubmit" type="text" name="palavra" placeholder="Sua palavra aqui" required
+                    autocomplete="off" />
+                <input class="btnBuscar" type="submit" value="Buscar" onclick="discionario()" />
+            </form>
+            <section class="resultado js-resultado display-none">
+                <div class="carregamento js-carregamento display-none"></div>
+                <h3 class="resultado__titulo js-resultado__titulo"></h3>
+                <span class="resultado__descricao js-resultado__descricao">
+
+                </span>
+            </section>
+        </div>
+    </main>
+    <!--Relogio Digital-->
+    <main class="card3">
+
+        <div class="cardRelogioDigital" id="cardRelogioDigital">
+            <label class="LabelRelogio">Relógio Digital</label>
+            <div class="relogio">
+                <div class="horaTemp">
+                    <span id="horas">18</span>
+                    <div class="tempo">Horas</div>
+                </div>
+
+                <div class="minutosTemp">
+                    <span id="minutos">00</span>
+                    <div class="tempo">Minutos</div>
+                </div>
+
+                <div class="segundosTemp">
+                    <span id="segundos">00</span>
+                    <div class="tempo">Segundos</div>
+                </div>
+                <div>
+                    <h1 class="txtSaud"></h1>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
