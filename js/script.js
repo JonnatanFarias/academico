@@ -113,6 +113,29 @@ const relogio = setInterval(function time() {
 });
 
 
+function gerarSenha() {
+
+    let caracters = ("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJLMNOPQRSTUVWXYZ!@#$%^&*()+?><:{}[]");
+    let tamanhoSenha = document.getElementById("inputlengthSenha").value;
+    let password = "";
+
+    if (tamanhoSenha == 0) {
+        alert("Por favor, informe a quantidade de caracteres que você deseja para gerar a sua senha.");
+        return;
+    } else if (tamanhoSenha < 0) {
+        alert("Por favor, informe a quantidade de caracteres que você deseja para gerar a sua senha.");
+        return;
+    } else {
+        for (let i = 0; i < tamanhoSenha; i++) {
+            let randomNumber = Math.floor(Math.random() * caracters.length);
+            password += caracters.substring(randomNumber, randomNumber + 1);
+        }
+        document.getElementById("password").value = password;
+    }
+
+}
+
+
 
 
 

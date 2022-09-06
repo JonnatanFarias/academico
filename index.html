@@ -29,7 +29,7 @@
                 <a href="#cardRelogioDigital">Relógio Digital</a>
             </li>
             <li>
-                Example4
+               <a href="#cardGeradorSenha">Gerador de senha</a> 
             </li>
         </ul>
     </header>
@@ -120,6 +120,23 @@
                 <div>
                     <h1 class="txtSaud"></h1>
                 </div>
+            </div>
+        </div>
+    </main>
+    <!--Gerador de senhas-->
+    <main class="card4">
+
+        <div class="cardGeradorSenha" id="cardGeradorSenha">
+            <label class="LabelGeradorSenha">Gerador de senha</label>
+            <input class="inputSenhaGerada" type="text" placeholder="Sua senha aqui" id="password" readonly="">
+            <div class="parametros" style="margin-top: 30px">
+                <label style="text-transform: uppercase;">Informe o tamanho da senha</label>
+                <div>
+                    <input class="inputlengthSenha" id="inputlengthSenha" type="number" placeholder="Tamanho da senha">
+                </div>
+            </div>
+            <div  class="divBtn">
+                <button class="buttonGerar" id="btnGeraSenha" onclick="gerarSenha()">Gerar senha</button>
             </div>
         </div>
     </main>
