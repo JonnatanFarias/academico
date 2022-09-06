@@ -415,7 +415,7 @@ p {
     width: 50%;
     height: 10%;
     font-size: xx-large;
-    margin-top: 25%;
+    margin-top: 20%;
     border: 5px solid;
     border-top: none;
     border-left: none;
@@ -430,7 +430,7 @@ p {
 @keyframes border-input-animation {
 
     50% {
-        border-color: yellowgreen;
+        border-color: black;
     }
 }
 
