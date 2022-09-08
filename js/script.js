@@ -17,7 +17,15 @@ function calcula() {
     /*faz várias verificações*/
     if (checkAdi.checked != true && checkSub.checked != true && checkMul.checked != true && checkDiv.checked != true) {
         alert("Nenhuma das opções foram marcadas");
-    } else if (n1 == "" && n2 == "") {
+    }else if(checkAdi.checked == true && checkSub.checked == true && checkMul.checked == true && checkDiv.checked == true && n1 =="" && n2=="" ){
+        alert("Você precisar informar os valores para realizar os cálculos.");
+    } else if(checkAdi.checked == true && checkSub.checked == true && checkMul.checked == true && checkDiv.checked == true){
+        /*faz o calculo em massa se todos os checkbox foram marcados*/
+        labelAdi.innerText = `O Resultado da adição foi : ${n1 + n2}`;
+        labelSub.innerText = `O Resultado da subtração foi : ${n1 - n2}`;
+        labelMul.innerText = `O Resultado da Multiplicação foi : ${n1 * n2}`;
+        labelDiv.innerText = `O Resultado da Divisão foi : ${n1 / n2}`;
+    }else if (n1 == "" && n2 == "") {
         alert("É necessário informar valores para realizar os cálculos.");
     } else if (n1 == "") {
         alert("Campo 1 sem valor.");
@@ -32,16 +40,7 @@ function calcula() {
     } else if (checkDiv.checked) {
         labelDiv.innerText = `O Resultado da Divisão foi : ${n1 / n2}`;
     }
-    /*faz o calculo em massa se todos os checkbox foram marcados*/
-    switch (true) {
-        case checkAdi.checked, checkSub.checked, checkMul.checked, checkDiv.checked:
-            labelAdi.innerText = `O Resultado da adição foi : ${n1 + n2}`;
-            labelSub.innerText = `O Resultado da subtração foi : ${n1 - n2}`;
-            labelMul.innerText = `O Resultado da Multiplicação foi : ${n1 * n2}`;
-            labelDiv.innerText = `O Resultado da Divisão foi : ${n1 / n2}`;
-    }
-
-
+    
 }
 
 /*Funcionamento do discionario online*/
@@ -96,16 +95,31 @@ const relogio = setInterval(function time() {
     let seg = dateToday.getSeconds();
 
     if (hr < 10) hr = `0${hr}`;
+
     if (min < 10) min = `0${min}`;
+
     if (seg < 10) seg = `0${seg}`;
 
-    if (hr >= 6 && hr < 12)
-        txtSaudacao.textContent = "Bom dia!"
-    if (hr >= 12 && hr < 18)
-        txtSaudacao.textContent = "Boa tarde!"
-    if (hr >= 18)
-        txtSaudacao.textContent = "Boa noite!"
 
+    if (hr >= 6 && hr < 12) {
+
+        let colorDia = document.getElementById("cardRelogioDigital");
+        colorDia.style.background = ("linear-gradient(0deg ,#FFB200 5%,#FFCB42 25%, #277BC0 50%)");
+        txtSaudacao.textContent = "Bom dia!";
+
+    }else if (hr >= 12 && hr < 18) {
+
+        let colorTarde = document.getElementById("cardRelogioDigital");
+        colorTarde.style.background = ("linear-gradient(0deg ,#D07000 10%,#FFB200 45%, #C55300 90%)");
+        txtSaudacao.textContent = "Boa tarde!";
+
+    }else if (hr >= 18) {
+        
+        let colorNoite = document.getElementById("cardRelogioDigital");
+        colorNoite.style.background = ("linear-gradient(0deg ,#577BC1 15%,#344CB7 35%, #1F1D36 70%)");
+        txtSaudacao.textContent = "Boa noite!";
+
+    }
     horas.textContent = hr;
     minutos.textContent = min;
     segundos.textContent = seg;
