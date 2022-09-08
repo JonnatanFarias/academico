@@ -102,7 +102,7 @@ const relogio = setInterval(function time() {
 
 
     if (hr >= 6 && hr < 12) {
-
+        
         let colorDia = document.getElementById("cardRelogioDigital");
         colorDia.style.background = ("linear-gradient(0deg ,#FFB200 5%,#FFCB42 25%, #277BC0 50%)");
         txtSaudacao.textContent = "Bom dia!";
@@ -148,6 +148,9 @@ function gerarSenha() {
     }
 
 }
+
+
+
 
 
 
